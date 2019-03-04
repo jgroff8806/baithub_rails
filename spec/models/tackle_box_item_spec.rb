@@ -11,9 +11,13 @@
 #  updated_at :datetime         not null
 #
 
-class TackleBoxItem < ApplicationRecord
-  belongs_to :bait
-  belongs_to :user
+require 'rails_helper'
 
-  default_scope { order(created_at: :desc) }
+RSpec.describe TackleBoxItem, type: :model do
+  subject { create(:tackle_box_item) }
+
+  it { should be_valid }
+
+  it { is_expected.to belong_to(:bait) }
+  it { is_expected.to belong_to(:user) }
 end

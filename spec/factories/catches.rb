@@ -14,15 +14,12 @@
 #  updated_at :datetime         not null
 #
 
-class Catch < ApplicationRecord
-  belongs_to :bait
-  belongs_to :user
-
-  validates :species, presence: true
-
-  validates :weight, :length,
-            numericality: { greater_than: 0 },
-            presence: true
-
-  default_scope { order(created_at: :desc) }
+FactoryBot.define do
+  factory :catch do
+    species { 'species' }
+    weight { 7 }
+    length { 12.0 }
+    bait_id { 1 }
+    user_id { 1 }
+  end
 end

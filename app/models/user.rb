@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: users
@@ -20,6 +22,6 @@ class User < ApplicationRecord
 
   def self.authenticate(username, password)
     user = User.find_by(username: username)
-    user && user.authenticate(password)
+    user&.authenticate(password)
   end
 end

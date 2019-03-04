@@ -12,7 +12,10 @@
 #  updated_at :datetime         not null
 #
 
-class Bait < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
-  validates :category, :image, presence: true
+FactoryBot.define do
+  factory :bait do
+    name { 'name' }
+    category { 'category' }
+    image { 'image' }
+  end
 end

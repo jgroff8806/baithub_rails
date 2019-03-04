@@ -11,9 +11,9 @@
 #  updated_at :datetime         not null
 #
 
-class TackleBoxItem < ApplicationRecord
-  belongs_to :bait
-  belongs_to :user
-
-  default_scope { order(created_at: :desc) }
+FactoryBot.define do
+  factory :tackle_box_item do
+    bait_id { 1 }
+    user_id { 1 }
+  end
 end

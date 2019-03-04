@@ -12,7 +12,14 @@
 #  updated_at :datetime         not null
 #
 
-class Bait < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
-  validates :category, :image, presence: true
+require 'rails_helper'
+
+RSpec.describe Bait, type: :model do
+  subject { create(:bait) }
+
+  it { should be_valid }
+
+  it { is_expected.to validate_presence_of(:name) }
+  it { is_expected.to validate_presence_of(:category) }
+  it { is_expected.to validate_presence_of(:image) }
 end
