@@ -3,16 +3,17 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 5.2.2'
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-gem 'puma', '~> 3.11'
-gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'jbuilder', '~> 2.5'
+gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+gem 'puma', '~> 3.11'
 gem 'rack-cors'
+gem 'rails', '~> 5.2.2'
 
 group :development, :test do
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'binding_of_caller'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 4.8.2'
   gem 'faker', '~> 1.8.4'
