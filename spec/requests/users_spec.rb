@@ -2,5 +2,5 @@
 
 require 'rails_helper'
 
-RSpec.describe SessionsController, type: :controller do
+RSpec.describe 'Users', type: :request do
 end

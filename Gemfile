@@ -5,11 +5,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'jbuilder', '~> 2.5'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 gem 'puma', '~> 3.11'
 gem 'rack-cors'
 gem 'rails', '~> 5.2.2'
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   gem 'better_errors', '~> 2.1', '>= 2.1.1'

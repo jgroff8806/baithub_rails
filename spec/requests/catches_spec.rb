@@ -2,5 +2,5 @@
 
 require 'rails_helper'
 
-RSpec.describe BaitsController, type: :controller do
+RSpec.describe 'Catches', type: :request do
 end
